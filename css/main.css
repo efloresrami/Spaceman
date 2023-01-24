@@ -1,7 +1,16 @@
 body {
-  height: 100vh;
+  height: 100%;
+  background-image: url("https://s3.amazonaws.com/media.thecrimson.com/photos/2021/01/02/140548_1347693.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.bg {
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  background-image: url("https://s3.amazonaws.com/media.thecrimson.com/photos/2021/01/02/140548_1347693.jpg");
+}
 h1 {
   display: flex;
   justify-content: center;

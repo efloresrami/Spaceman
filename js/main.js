@@ -1,16 +1,28 @@
 /*----- constants -----*/
-
+const WORD_BANK = []
 /*----- app's state (variables) -----*/
 let remainingLetters
 let lives
-let winner
+let gameStatus
+let secretWo
+// let answer
+// let mistakes
+// let wordstatus
+// let gamestatus
 
 /*----- cached element references -----*/
-
+const message = document.getElementById('message')
+const wrongGuess = document.getElementById('spotlight')
+const letterButton = [...document.querySelectorAll('main > button')]
+const spaceman = document.querySelector('img')
 /*----- event listeners -----*/
-
+letterButton.addEventListener('click', handleclick)
 /*----- functions -----*/
 init();
+function handleclick(evt) {
+  console.log(evt.target)
+}
+
 
 function init() {
   remainingLetters = {A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z};
@@ -29,7 +41,6 @@ function renderLives() {
   
 }
 function render() {
-  renderRemainingLetters();
-  renderLives();
+  spaceman.src = `img/spaceman-${wrongGuesses.length}.jpg`;
   
 }
