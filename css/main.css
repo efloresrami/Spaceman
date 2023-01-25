@@ -52,7 +52,7 @@ button {
   font-size: 32px;
   color: aquamarine;
   height: 25px;
-  margin-top: 20vmin;
+  margin-bottom: vmin;
 }
 .word-wrapper {
   flex-direction: row;

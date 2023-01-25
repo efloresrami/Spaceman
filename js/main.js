@@ -50,6 +50,15 @@ function handleclick(evt) {
   render();
 }
 
+function renderMessage() {
+  if (gameStatus === "w") {
+    message.textContent = "Spaceman came back in one piece!";
+  } else if (gameStatus === "L") {
+    message.textContent = "Spaceman has been lost!";
+  } else {
+    message.textContent = `You have only ${MAX_WRONG - wrongGuesses.length} tries left!`
+  }
+}
 
 
 function renderLives() {
@@ -58,5 +67,5 @@ function renderLives() {
 function render() {
   spaceman.src = `img/spaceman-${wrongGuesses.length}.jpg`;
   wordDisplay.textContent = wordStatus.join(' ')
-  
+  renderMessage()
 }
