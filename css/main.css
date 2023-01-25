@@ -5,16 +5,12 @@ body {
   background-size: cover;
 }
 
-.bg {
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100%;
-  background-image: url("https://s3.amazonaws.com/media.thecrimson.com/photos/2021/01/02/140548_1347693.jpg");
-}
 h1 {
+  flex-direction: row;
   display: flex;
   justify-content: center;
   font-size: 48px;
+  color: aqua;
 }
 
 h2 {
@@ -22,6 +18,7 @@ h2 {
   justify-content: center;
   font-size: 36px;
   margin-top: 10vh;
+  color: aquamarine;
 }
 main {
   display: flex;
@@ -31,6 +28,7 @@ main {
 }
 
 div {
+  flex-direction: row;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -40,8 +38,8 @@ div {
   font-size: 32px;
 }
 
-div:hover {
-  background-color: grey;
+button {
+  height: 26px;
 }
 
 .number-of-lives {
@@ -49,13 +47,21 @@ div:hover {
   justify-content: center;
   margin-top: 15vh;
   font-size: 32px;
+  color: aquamarine;
 }
 .word-wrapper {
+  flex-direction: row;
   display: flex;
   justify-content: center;
-  margin-top: 30vh;
-  width: 280px;
+  margin-top: auto;
+  width: 100%;
   border: none;
+}
+
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 aside {
   display: flex;
