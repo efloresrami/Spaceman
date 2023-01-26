@@ -64,14 +64,13 @@ button {
 }
 
 .img-wrapper {
-  display: flex;
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 200px;
 }
 
 img {
-  display: flex;
-  align-items: center;
   height: 200px;
 }
 
@@ -79,4 +78,17 @@ aside {
   display: flex;
   justify-content: flex-end;
   margin: 72px 72px
+}
+
+p#message {
+  color: aqua;
+
+}
+
+.Incorrect {
+  background-color: red;
+}
+
+.Correct {
+  background-color: green;
 }

@@ -21,8 +21,10 @@ const message = document.getElementById('message')
 const wordDisplay = document.getElementById('p-guess-word')
 const letterButton = [...document.querySelectorAll('main > button')]
 const spaceman = document.querySelector('img')
+const playAgainEl = document.getElementById('PA-button')
 /*----- event listeners -----*/
 document.querySelector('main').addEventListener('click', handleclick)
+playAgainEl.addEventListener('click', init)
 /*----- functions -----*/
 init();
 console.log(WORD_BANK)
@@ -47,11 +49,12 @@ function handleclick(evt) {
   } else {
     wrongGuesses.push(ltr)
   }
+  gameStatus = getGameStatus();
   render();
 }
 
 function renderMessage() {
-  if (gameStatus === "w") {
+  if (gameStatus === "W") {
     message.textContent = "Spaceman came back in one piece!";
   } else if (gameStatus === "L") {
     message.textContent = "Spaceman has been lost!";
@@ -60,12 +63,28 @@ function renderMessage() {
   }
 }
 
-
-function renderLives() {
-  
+function getGameStatus() {
+  if (!wordStatus.includes("_")) return "W";
+  if(wrongGuesses.length > MAX_WRONG) return "L";
+  return null;
 }
+
+function renderButtonStyle() {
+  letterButton.forEach(function(btn) {
+    const letter = btn.textContent;
+    if (wrongGuesses.includes(letter)) {
+      btn.className = 'Incorrect'
+    } else if (wordStatus.includes(letter)) {
+      btn.className = 'Correct'
+    } else {
+      btn.className = ''
+    }
+  }) 
+}
+
 function render() {
   spaceman.src = `img/spaceman-${wrongGuesses.length}.jpg`;
   wordDisplay.textContent = wordStatus.join(' ')
   renderMessage()
+  renderButtonStyle()
 }
