@@ -38,7 +38,7 @@ function init() {
   console.log(wordStatus, "Word Status")
   render();
 };
-
+// new comment
 function handleclick(evt) {
   const ltr = evt.target.textContent
   if (evt.target.tagName !== 'BUTTON' || wrongGuesses.includes(ltr)) return
