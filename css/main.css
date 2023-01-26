@@ -43,22 +43,15 @@ button {
 }
 
 #p-guess-word {
-  margin-top: 50vmin;
+  margin-top: auto;
+  margin-left: auto;
 }
 
-.number-of-lives {
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-  color: aquamarine;
-  height: 25px;
-  margin-bottom: vmin;
-}
 .word-wrapper {
   flex-direction: row;
   display: flex;
   justify-content: center;
-  margin-top: auto;
+  margin-top: 10vmin;
   width: 100%;
   border: none;
 }
@@ -67,6 +60,7 @@ button {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15vmin;
   height: 200px;
 }
 
@@ -77,18 +71,21 @@ img {
 aside {
   display: flex;
   justify-content: flex-end;
-  margin: 72px 72px
+  margin: 72px 72px;
 }
 
 p#message {
   color: aqua;
-
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Incorrect {
-  background-color: red;
+  background-color: rgb(25 0 79);
+  color: rgb(35 255 105);
 }
 
 .Correct {
-  background-color: green;
+  background-color: rgb(35 255 105);
+  color: rgb(25 0 79);
 }

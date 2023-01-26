@@ -57,7 +57,7 @@ function renderMessage() {
   if (gameStatus === "W") {
     message.textContent = "Spaceman came back in one piece!";
   } else if (gameStatus === "L") {
-    message.textContent = "Spaceman has been lost!";
+    message.textContent = `Spaceman has been lost! The secret word is ${secretWord.join("")}`;
   } else {
     message.textContent = `You have only ${MAX_WRONG - wrongGuesses.length} tries left!`
   }
