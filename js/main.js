@@ -27,15 +27,13 @@ document.querySelector('main').addEventListener('click', handleclick)
 playAgainEl.addEventListener('click', init)
 /*----- functions -----*/
 init();
-console.log(WORD_BANK)
+
 
 function init() {
   secretWord = WORD_BANK[Math.floor(Math.random() *WORD_BANK.length)].toUpperCase('').split('');
   wrongGuesses = []
   wordStatus = secretWord.map(ltr => ltr === '' ? '' : '_')
   gameStatus = null
-  console.log(secretWord, 'secret')
-  console.log(wordStatus, "Word Status")
   render();
 };
 
