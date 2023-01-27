@@ -28,7 +28,8 @@
 
   |   Description | Screenshot | 
   |:-------------:| -----------|
-  | <h3>Player Won</h3> | <img
+  
+  | <h3 align="center">Player Won</h3> | <img
     src="img/Spaceman won.png"
     width="700"
   /> |
