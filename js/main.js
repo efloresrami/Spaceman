@@ -38,7 +38,7 @@ function init() {
   console.log(wordStatus, "Word Status")
   render();
 };
-// new comment
+
 function handleclick(evt) {
   const ltr = evt.target.textContent
   if (evt.target.tagName !== 'BUTTON' || wrongGuesses.includes(ltr)) return
@@ -65,7 +65,7 @@ function renderMessage() {
 
 function getGameStatus() {
   if (!wordStatus.includes("_")) return "W";
-  if(wrongGuesses.length > MAX_WRONG) return "L";
+  if (wrongGuesses.length > MAX_WRONG) return "L";
   return null;
 }
 

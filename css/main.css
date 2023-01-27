@@ -51,7 +51,7 @@ button {
   flex-direction: row;
   display: flex;
   justify-content: center;
-  margin-top: 20vh;
+  margin-top: 15vh;
   width: 100%;
   border: none;
 }
@@ -61,7 +61,7 @@ button {
   align-items: center;
   flex-direction: row;
   margin: auto;
-  margin-top: 30vh;
+  margin-top: 15vh;
 }
 
 img {
