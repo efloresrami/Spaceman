@@ -39,7 +39,7 @@ function init() {
 
 function handleclick(evt) {
   const ltr = evt.target.textContent
-  if (evt.target.tagName !== 'BUTTON' || wrongGuesses.includes(ltr)) return
+  if (evt.target.tagName !== 'BUTTON' || wrongGuesses.includes(ltr) || gameStatus) return
   if (secretWord.includes(ltr)) {
     secretWord.forEach(function(char, idx) {
       if (char === ltr) wordStatus[idx] = ltr
@@ -63,7 +63,7 @@ function renderMessage() {
 
 function getGameStatus() {
   if (!wordStatus.includes("_")) return "W";
-  if (wrongGuesses.length > MAX_WRONG) return "L";
+  if (wrongGuesses.length >= MAX_WRONG) return "L";
   return null;
 }
 
